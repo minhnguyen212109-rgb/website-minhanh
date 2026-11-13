@@ -1,1 +1,340 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Minh Anh | Website cá nhân</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --gold: #c49a36;
+            --gold-light: #f3dfaa;
+            --gold-dark: #80601f;
+            --cream: #fffaf0;
+            --white: #ffffff;
+            --text: #302b20;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: #302719;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        header h2 {
+            color: var(--gold-light);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--gold-light);
+        }
+
+        .hero {
+            padding: 65px 8%;
+            background: linear-gradient(135deg, #302719, #98752d);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold-light);
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        section {
+            padding: 50px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold-dark);
+            font-size: 29px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px #00000010;
+        }
+
+        .about p {
+            font-size: 17px;
+            margin: 8px 0;
+        }
+
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px #00000012;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card h3 {
+            color: var(--gold-dark);
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .subjects {
+            text-align: center;
+        }
+
+        .subject {
+            display: inline-block;
+            background: var(--gold-light);
+            color: #493713;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .video-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px #00000010;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .facebook {
+            text-align: center;
+            background: #fff3d3;
+            border-radius: 16px;
+            max-width: 700px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .facebook h3 {
+            color: var(--gold-dark);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .facebook a {
+            display: inline-block;
+            margin-top: 18px;
+            background: var(--gold-dark);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .facebook a:hover {
+            background: #5c4318;
+        }
+
+        footer {
+            background: #302719;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            border-top: 3px solid var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>MY WEBSITE</h2>
+        <nav>
+            <a href="#about">Giới thiệu</a>
+            <a href="#hobby">Sở thích</a>
+            <a href="#video">Video</a>
+            <a href="#contact">Facebook</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="images/anh-dai-dien.jpg.jpeg" alt="Ảnh đại diện Nguyễn Minh Anh">
+
+        <div>
+            <h1>Nguyễn Minh Anh</h1>
+            <p>Chào mừng đến với website cá nhân của mình!</p>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2 class="section-title">Giới thiệu bản thân</h2>
+
+        <div class="about">
+            <p><strong>Họ và tên:</strong> Nguyễn Minh Anh</p>
+            <p><strong>Ngày sinh:</strong> 11/09/2009</p>
+            <p><strong>Sở thích:</strong> Cầu lông, xem phim và nuôi chó.</p>
+            <p>
+                Xin chào! Mình là Nguyễn Minh Anh.
+                Đây là website cá nhân, nơi mình chia sẻ
+                những thông tin và sở thích của bản thân.
+            </p>
+        </div>
+    </section>
+
+    <section id="hobby">
+        <h2 class="section-title">Sở thích của mình</h2>
+
+        <div class="hobby-grid">
+
+            <div class="card">
+                <img src="images/cau-long.jpg.jpeg" alt="Cầu lông">
+                <div class="card-content">
+                    <h3>Cầu lông</h3>
+                    <p>Mình thích chơi cầu lông để giải trí và rèn luyện sức khỏe.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/xem-phim.jpg.jpeg" alt="Xem phim">
+                <div class="card-content">
+                    <h3>Xem phim</h3>
+                    <p>Mình thích xem phim vào thời gian rảnh để thư giãn.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/nuoi-cho.jpg.jpeg" alt="Nuôi chó">
+                <div class="card-content">
+                    <h3>Nuôi chó</h3>
+                    <p>Mình yêu động vật và thích chăm sóc những chú chó đáng yêu.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="subjects">
+        <h2 class="section-title">Môn học yêu thích</h2>
+
+        <span class="subject">Toán</span>
+        <span class="subject">Vật lý</span>
+        <span class="subject">Tiếng Anh</span>
+    </section>
+
+    <section id="video">
+        <h2 class="section-title">Video của mình</h2>
+
+        <div class="video-box">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Kết nối với mình</h2>
+
+        <div class="facebook">
+            <h3>Facebook</h3>
+            <p>Cùng kết nối với mình qua Facebook nhé!</p>
+
+            <a href="https://www.facebook.com/share/1A4VnLxm7Z/?mibextid=wwXIfr"
+               target="_blank"
+               rel="noopener noreferrer">
+                Truy cập Facebook
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Nguyễn Minh Anh | Website cá nhân</p>
+    </footer>
+
+</body>
+</html>
+
